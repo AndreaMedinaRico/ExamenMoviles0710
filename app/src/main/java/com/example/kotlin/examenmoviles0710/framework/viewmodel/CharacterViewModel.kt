@@ -18,14 +18,12 @@ class CharacterViewModel: ViewModel() {
     fun getCharacters(){
         viewModelScope.launch(Dispatchers.IO) {
             val characterRepository = CharacterRepository()
-            val result: CharacterResponse? = characterRepository.getCharacters(1, Constants.MAX_CHARACTER_NUMBER)
-            Log.d("Salida", result?.items?.get(1)?.name.toString())
+            val result: List<Item> = characterRepository.getCharacters(Constants.MAX_CHARACTER_NUMBER)
+            Log.d("Salida", result?.get(1)?.name.toString())
 
             CoroutineScope(Dispatchers.Main).launch {
-                result?.let {
                     // Publicar la lista de Items en el LiveData
-                    characterItemsLiveData.postValue(it.items)
-                }
+                    characterItemsLiveData.postValue(result)
             }
         }
     }

@@ -19,7 +19,7 @@ import kotlinx.coroutines.launch
 class MainActivity(): AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val adapter : CharacterAdapter = CharacterAdapter()
-    private lateinit var data:ArrayList<CharacterResponse>
+    private lateinit var data:ArrayList<Item>
 
     private val viewModel: CharacterViewModel by viewModels()
 
