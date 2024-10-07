@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlin.examenmoviles0710.R
-import com.example.kotlin.examenmoviles0710.data.network.models.Item
+import com.example.kotlin.examenmoviles0710.data.network.models.Characters.Item
 import com.example.kotlin.examenmoviles0710.databinding.FragmentListBinding
 import com.example.kotlin.examenmoviles0710.framework.adapters.CharacterAdapter
 import com.example.kotlin.examenmoviles0710.framework.viewmodel.CharacterViewModel

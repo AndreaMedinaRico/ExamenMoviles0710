@@ -6,10 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.kotlin.examenmoviles0710.data.network.models.Item
+import com.example.kotlin.examenmoviles0710.data.network.models.Characters.Item
 import com.example.kotlin.examenmoviles0710.databinding.FragmentSearchBinding
 import com.example.kotlin.examenmoviles0710.framework.adapters.CharacterAdapter
 import com.example.kotlin.examenmoviles0710.framework.viewmodel.SearchViewModel

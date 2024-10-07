@@ -3,8 +3,7 @@ package com.example.kotlin.examenmoviles0710.framework.adapters.viewholders
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.kotlin.examenmoviles0710.R
-import com.example.kotlin.examenmoviles0710.data.network.models.CharacterResponse
-import com.example.kotlin.examenmoviles0710.data.network.models.Item
+import com.example.kotlin.examenmoviles0710.data.network.models.Characters.Item
 import com.example.kotlin.examenmoviles0710.databinding.ItemCharacterBinding
 
 class CharacterViewHolder(private val binding: ItemCharacterBinding) : RecyclerView.ViewHolder(binding.root) {
@@ -16,5 +15,6 @@ class CharacterViewHolder(private val binding: ItemCharacterBinding) : RecyclerV
         binding.TVMaxKi.text = binding.root.context.getString(R.string.maxKi, item.maxKi)
         binding.TVRace.text = binding.root.context.getString(R.string.race, item.race)
         binding.TVGender.text = binding.root.context.getString(R.string.gender, item.gender)
+        binding.TVDescription.text = item.description
     }
 }

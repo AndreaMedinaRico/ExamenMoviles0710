@@ -5,46 +5,76 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:background="#FFA500"
-    android:elevation="4dp"
-    >
+    android:elevation="4dp">
 
-    <LinearLayout        android:layout_width="match_parent"
+    <!-- Sección Personajes -->
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="56dp"
-        android:layout_weight="0.5"
+        android:layout_weight="1"
         android:orientation="vertical"
         android:id="@+id/llPokedex"
         android:layout_gravity="center"
         android:gravity="center"
-        android:background="@drawable/rounded_background"
-        >
-        <TextView            android:layout_width="match_parent"
+        android:background="@drawable/rounded_background">
+
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Personajes"
             android:textStyle="bold"
-            android:gravity="center"
-            />
-
+            android:gravity="center"/>
     </LinearLayout>
 
-    <View        android:layout_width="2dp"
-    android:layout_height="56dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="8dp"
-    />
-    <LinearLayout        android:layout_width="match_parent"
+    <!-- Separador -->
+    <View
+        android:layout_width="2dp"
         android:layout_height="56dp"
-        android:layout_weight="0.5"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Sección Búsqueda -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_weight="1"
         android:orientation="vertical"
         android:id="@+id/llSearch"
         android:layout_gravity="center"
         android:gravity="center"
-        android:background="@drawable/rounded_background"
-        >
+        android:background="@drawable/rounded_background">
 
-        <TextView            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Búsqueda"
             android:textStyle="bold"
-            android:gravity="center"
-            />
-    </LinearLayout></LinearLayout>
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Separador -->
+    <View
+        android:layout_width="2dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Nueva Sección Planetas -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:id="@+id/llPlanets"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/rounded_background">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Planetas"
+            android:textStyle="bold"
+            android:gravity="center"/>
+    </LinearLayout>
+</LinearLayout>

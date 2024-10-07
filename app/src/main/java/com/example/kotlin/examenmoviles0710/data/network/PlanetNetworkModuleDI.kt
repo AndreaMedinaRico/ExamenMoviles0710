@@ -5,16 +5,16 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object NetworkModuleDI {
+object PlanetNetworkModuleDI {
     private val gsonFactory: GsonConverterFactory = GsonConverterFactory.create()
     private val okHttpClient: OkHttpClient = OkHttpClient()
 
-    operator fun invoke(): CharacterAPIService {
+    operator fun invoke(): PlanetAPIService {
         return Retrofit.Builder()
             .baseUrl(Constants.BASE_URL)
             .client(okHttpClient)
             .addConverterFactory(gsonFactory)
             .build()
-            .create(CharacterAPIService::class.java)
+            .create(PlanetAPIService::class.java)
     }
 }

@@ -3,7 +3,7 @@ package com.example.kotlin.examenmoviles0710.framework.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.kotlin.examenmoviles0710.data.network.models.Item
+import com.example.kotlin.examenmoviles0710.data.network.models.Characters.Item
 import com.example.kotlin.examenmoviles0710.data.repositories.CharacterRepository
 import com.example.kotlin.examenmoviles0710.utils.Constants
 import kotlinx.coroutines.Dispatchers
