@@ -1,4 +1,4 @@
-package com.example.kotlin.examenmoviles0710.data.network.models
+package com.example.kotlin.examenmoviles0710.data.network.models.Characters
 
 data class Links(
     val first: String,

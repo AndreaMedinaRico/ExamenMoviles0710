@@ -1,6 +1,6 @@
 package com.example.kotlin.examenmoviles0710.data.network
 
-import com.example.kotlin.examenmoviles0710.data.network.models.CharacterResponse
+import com.example.kotlin.examenmoviles0710.data.network.models.Characters.CharacterResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

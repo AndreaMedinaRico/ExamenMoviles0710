@@ -1,15 +1,14 @@
 package com.example.kotlin.examenmoviles0710.data.repositories
 
 import com.example.kotlin.examenmoviles0710.data.network.CharacterAPIService
-import com.example.kotlin.examenmoviles0710.data.network.NetworkModuleDI
-import com.example.kotlin.examenmoviles0710.data.network.models.CharacterResponse
-import com.example.kotlin.examenmoviles0710.data.network.models.Item
+import com.example.kotlin.examenmoviles0710.data.network.CharacterNetworkModuleDI
+import com.example.kotlin.examenmoviles0710.data.network.models.Characters.Item
 
 class CharacterRepository {
     private lateinit var api: CharacterAPIService
 
     suspend fun getCharacters(limit: Int): List<Item> {
-        api = NetworkModuleDI()
+        api = CharacterNetworkModuleDI()
 
         var allCharacters = mutableListOf<Item>()
         var currentPage = 1
