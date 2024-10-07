@@ -14,18 +14,14 @@ import com.example.kotlin.examenmoviles0710.databinding.FragmentListBinding
 import com.example.kotlin.examenmoviles0710.framework.adapters.CharacterAdapter
 import com.example.kotlin.examenmoviles0710.framework.viewmodel.CharacterViewModel
 
-class CharacterFragment: Fragment() {
+class CharacterFragment : Fragment() {
     private var _binding: FragmentListBinding? = null
-
-    // This property is only valid between onCreateView and
-// onDestroyView.
     private val binding get() = _binding!!
 
     private lateinit var viewModel: CharacterViewModel
-
     private lateinit var recyclerView: RecyclerView
-    private val adapter : CharacterAdapter = CharacterAdapter()
-    private lateinit var data:ArrayList<Item>
+    private lateinit var adapter: CharacterAdapter
+    private lateinit var data: ArrayList<Item>
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -51,25 +47,22 @@ class CharacterFragment: Fragment() {
         _binding = null
     }
 
-    private fun initializeComponents(root:View){
+    private fun initializeComponents(root: View) {
         recyclerView = root.findViewById(R.id.Characters_List)
-    }
 
-    private fun initializeObservers(){
-        viewModel.characterItemsLiveData.observe(viewLifecycleOwner){ items ->
-            setUpRecyclerView(items)
-        }
-    }
+        // Inicializa el adaptador con la lista vacía y el contexto del fragmento
+        adapter = CharacterAdapter(data, requireContext())
 
-    private fun setUpRecyclerView(items: List<Item>){
         recyclerView.setHasFixedSize(true)
-        val linearLayoutManager = LinearLayoutManager(
-            requireContext(),
-            LinearLayoutManager.VERTICAL,
-            false)
-        recyclerView.layoutManager = linearLayoutManager
-
-        adapter.CharacterAdapter(items, requireContext())
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = adapter
+    }
+
+    private fun initializeObservers() {
+        viewModel.characterItemsLiveData.observe(viewLifecycleOwner) { items ->
+            data.clear()
+            data.addAll(items)
+            adapter.notifyDataSetChanged() // Notifica al adaptador que los datos han cambiado
+        }
     }
 }
