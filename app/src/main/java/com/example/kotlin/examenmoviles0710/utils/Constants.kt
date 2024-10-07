@@ -5,4 +5,5 @@ object Constants {
     const val MAX_CHARACTER_NUMBER = 10
     const val MENU_CHAR = "CHARACTERS"
     const val MENU_SEARCH = "SEARCH"
+    const val MENU_PLANETS = "PLANETS"
 }

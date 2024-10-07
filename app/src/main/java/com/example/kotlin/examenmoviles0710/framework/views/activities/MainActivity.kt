@@ -5,12 +5,12 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.kotlin.examenmoviles0710.R
-import com.example.kotlin.examenmoviles0710.data.network.models.Item
+import com.example.kotlin.examenmoviles0710.data.network.models.Characters.Item
 import com.example.kotlin.examenmoviles0710.databinding.ActivityMainBinding
-import com.example.kotlin.examenmoviles0710.framework.adapters.CharacterAdapter
 import com.example.kotlin.examenmoviles0710.framework.viewmodel.CharacterViewModel
 import com.example.kotlin.examenmoviles0710.framework.views.fragments.BusquedaFragment
 import com.example.kotlin.examenmoviles0710.framework.views.fragments.CharacterFragment
+import com.example.kotlin.examenmoviles0710.framework.views.fragments.PlanetFragment
 import com.example.kotlin.examenmoviles0710.utils.Constants
 
 class MainActivity(): AppCompatActivity() {
@@ -52,6 +52,10 @@ class MainActivity(): AppCompatActivity() {
         binding.appBarMain.llSearch.setOnClickListener {
             selectMenuOption(Constants.MENU_SEARCH)
         }
+
+        binding.appBarMain.llPlanets.setOnClickListener {
+            selectMenuOption(Constants.MENU_PLANETS)
+        }
     }
 
     private fun selectMenuOption(menuOption:String){
@@ -62,6 +66,7 @@ class MainActivity(): AppCompatActivity() {
         when(menuOption){
             Constants.MENU_CHAR -> exchangeCurrentFragment(CharacterFragment(),Constants.MENU_CHAR)
             Constants.MENU_SEARCH -> exchangeCurrentFragment(BusquedaFragment(),Constants.MENU_SEARCH)
+            Constants.MENU_PLANETS -> exchangeCurrentFragment(PlanetFragment(),Constants.MENU_PLANETS)
         }
     }
 

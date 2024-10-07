@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">ExamenMoviles0710</string>
+    <string name="description"> Descripción</string>
     <string name="nombre"> Nombre</string>
     <string name="ki"> Ki: %1$s </string>
     <string name="maxKi"> Ki máximo: %1$s </string>
@@ -7,5 +8,10 @@
     <string name="gender"> Género: %1$s </string>
     <string name="transformations"> Transformaciones... </string>"
     <string name="buscar"> Buscar </string>
+    <string name="personajes"> Personajes originarios de este planeta: </string>
+
+    <string name="nombrePlan"> Nombre</string>
+    <string name="descripcionPlan"> Descripción</string>
+    <string name="estado"> Estado: %1$s  </string>
 
 </resources>
