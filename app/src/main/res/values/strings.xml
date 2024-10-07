@@ -6,5 +6,6 @@
     <string name="race"> Raza: %1$s </string>
     <string name="gender"> Género: %1$s </string>
     <string name="transformations"> Transformaciones... </string>"
+    <string name="buscar"> Buscar </string>
 
 </resources>
