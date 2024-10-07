@@ -33,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -43,4 +46,26 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    // Retrofit --> Conexiones API y HTTPS
+    implementation(libs.retrofit)
+    implementation(libs.converterGson)
+
+    // Glide --> Cargar imágenes de internet
+    implementation(libs.glide)  // Librería Glide para el código de producción
+    annotationProcessor(libs.glideCompiler)  // Procesador de anotaciones para Glide
+    implementation(libs.glideTransformations)  // Librería de transformaciones de Glide
+
+    // Corrutinas --> Peticiones asíncronas
+    implementation(libs.coroutines)
+
+    // Encargados de mantener vivas versiones anteriores
+    implementation(libs.fragmentKtx)
+    implementation(libs.activityKtx)
+    implementation(libs.dataBindingRuntime)
+
+    // View Model
+    implementation(libs.viewModel)
+    // LiveData
+    implementation(libs.liveData)
 }
