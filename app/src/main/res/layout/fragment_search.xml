@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- EditText para ingresar el nombre del personaje -->
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingresa el nombre del personaje"
+        android:padding="12dp" />
+
+    <!-- Botón para iniciar la búsqueda -->
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buscar"
+        android:layout_below="@id/searchEditText"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/button_background"
+        android:padding="12dp" />
+
+    <!-- RecyclerView para mostrar la lista de personajes -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Characters_List"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/searchButton"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

@@ -10,4 +10,12 @@ interface CharacterAPIService {
         @Query("page") page: Int,
         @Query("limit") limit: Int
     ): CharacterResponse
+
+    @GET("characters")
+    suspend fun searchCharacters(
+        @Query("name") name: String,
+        @Query("page") page: Int,
+        @Query("limit") limit: Int
+    ): CharacterResponse
+
 }
