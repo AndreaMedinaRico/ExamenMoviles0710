@@ -1,5 +1,6 @@
 package com.example.kotlin.examenmoviles0710.framework.adapters
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -12,7 +13,7 @@ class CharacterAdapter : RecyclerView.Adapter<CharacterViewHolder>() {
     private var data: List<Item> = emptyList() // Cambiar a List<Item>
 
     // Cambiar el constructor para aceptar una lista de Item
-    fun CharacterAdapter(basicData: List<Item>, context: MainActivity) {
+    fun CharacterAdapter(basicData: List<Item>, context: Context) {
         this.data = basicData
     }
 
