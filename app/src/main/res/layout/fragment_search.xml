@@ -18,10 +18,11 @@
         android:id="@+id/searchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Buscar"
+        android:text="@string/buscar"
         android:layout_below="@id/searchEditText"
         android:layout_marginTop="8dp"
         android:layout_alignParentEnd="true"
+        android:background="@drawable/button_background"
         android:padding="12dp" />
 
     <!-- RecyclerView para mostrar la lista de personajes -->

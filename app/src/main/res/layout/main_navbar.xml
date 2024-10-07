@@ -4,7 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
+    android:background="#FFA500"
+    android:elevation="4dp"
     >
+
     <LinearLayout        android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_weight="0.5"
@@ -12,6 +15,7 @@
         android:id="@+id/llPokedex"
         android:layout_gravity="center"
         android:gravity="center"
+        android:background="@drawable/rounded_background"
         >
         <TextView            android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -19,7 +23,10 @@
             android:textStyle="bold"
             android:gravity="center"
             />
-    </LinearLayout>    <View        android:layout_width="2dp"
+
+    </LinearLayout>
+
+    <View        android:layout_width="2dp"
     android:layout_height="56dp"
     android:layout_marginTop="8dp"
     android:layout_marginBottom="8dp"
@@ -31,6 +38,7 @@
         android:id="@+id/llSearch"
         android:layout_gravity="center"
         android:gravity="center"
+        android:background="@drawable/rounded_background"
         >
 
         <TextView            android:layout_width="match_parent"
